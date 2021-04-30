@@ -29,4 +29,6 @@ while True:
             print("You win", player, "beats", computer)
     else:
         print("Check your spelling.....")
-
+l = ["rock", "scissor", "paper"]
+computer = random.choice(l)
+print(computer)
