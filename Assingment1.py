@@ -3,6 +3,5 @@ f1 = []
 for i in list:
     if i not in f1:
         f1.append(i)
-    else:
-    
-        print(f1)
+f1.sort()
+print(f1)
