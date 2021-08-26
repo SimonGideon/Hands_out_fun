@@ -1,4 +1,4 @@
-import pip
+wqeq3import pip
 import PIL
 
 from PIL import Image
