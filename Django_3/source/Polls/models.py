@@ -4,6 +4,15 @@ from django.contrib.sessions.backends.db import SessionStore as DBStore
 from django.contrib.sessions.base_session import AbstractBaseSession
 
 
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+
+
+class Book(models.Model):
+    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    title = models.CharField(max_length=100)
+
+
 class CustomerSession(AbstractBaseSession):
     account_id = models.IntegerField(null=True, db_index=True)
 
