@@ -12,3 +12,17 @@ def get_name(request):
         else:
             form = NameForm()
     return render(request, 'forms.html', {'form': form})
+
+
+from .forms import ContactForm
+from django.views.generic.edit import FormView
+
+
+class ContactFormView(FormView):
+    template_name = 'contact.html'
+    form_class = ContactForm
+    success_url = '/thanks/'
+
+    def form_valid(self, form):
+        form.send_email()
+        return super().form_valid(form)
