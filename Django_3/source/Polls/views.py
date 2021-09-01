@@ -1,7 +1,13 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from .forms import NameForm
+from django.views.generic import TemplateView
 
+class HomeView(TemplateView):
+    template_name = '.templates/forms.html'
+    def get_context_data(self, **kwargs):
+        kwargs['Enviroment'] = 'Prodution'
+        return super().get_context_data(**kwargs)
 
 # Create your views here.
 def get_name(request):
