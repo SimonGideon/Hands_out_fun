@@ -11,3 +11,5 @@ name = input('Name of Birthday Legend?')
 b_date = b.date.split('-')
 
 if current_date_1st[1] == b.date[1] and current_date_1st[2]==b.date[2]:
+    age=int(current_date_1st[0])-int(b.date[0])
+    ordinal_suffix = {1: 'st', 2: 'nd', 3:'rd'}
