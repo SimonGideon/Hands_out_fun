@@ -1,5 +1,5 @@
 from turtle import *
-from turtle import colormode
+
 from time import sleep
 colormode(255)
 red = (223, 35, 35); green=(75, 183, 75); yellow=(252, 210, 9);
